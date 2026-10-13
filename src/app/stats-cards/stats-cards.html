@@ -1,0 +1,8 @@
+<section class="stats">
+  @for (stat of stats(); track stat.title) {
+    <article class="stat-card">
+      <p>{{ stat.title }}</p>
+      <h2>{{ stat.value }}</h2>
+    </article>
+  }
+</section>
