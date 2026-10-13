@@ -8,5 +8,8 @@ import { Component, input } from '@angular/core';
   standalone: true,
 })
 export class StatsCards {
-  stats = input.required<{ title: string; value: number }[]>();
+  totalTasks = input.required<number>();
+  completedTasks = input.required<number>();
+  pendingTasks = input.required<number>();
+  inProgressTasks = input.required<number>();
 }

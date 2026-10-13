@@ -1,8 +1,21 @@
 <section class="stats">
-  @for (stat of stats(); track stat.title) {
-    <article class="stat-card">
-      <p>{{ stat.title }}</p>
-      <h2>{{ stat.value }}</h2>
-    </article>
-  }
+  <article class="stat-card">
+    <p>Total Tasks</p>
+    <h2>{{ totalTasks() }}</h2>
+  </article>
+
+  <article class="stat-card">
+    <p>Completed</p>
+    <h2>{{ completedTasks() }}</h2>
+  </article>
+
+  <article class="stat-card">
+    <p>Pending</p>
+    <h2>{{ pendingTasks() }}</h2>
+  </article>
+
+  <article class="stat-card">
+    <p>In Progress</p>
+    <h2>{{ inProgressTasks() }}</h2>
+  </article>
 </section>

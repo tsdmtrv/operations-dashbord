@@ -213,7 +213,12 @@
     <button class="primary-button">+ New Task</button>
   </header>
 
-  <app-stats-cards [stats]="stats" />
+  <app-stats-cards
+    [totalTasks]="totalTasks"
+    [completedTasks]="completedTasks"
+    [pendingTasks]="pendingTasks"
+    [inProgressTasks]="inProgressTasks"
+  />
   <section class="tasks-section">
     <h2>Recent Tasks</h2>
 

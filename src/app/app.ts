@@ -11,12 +11,22 @@ import { Task } from './task.model';
   standalone: true,
 })
 export class App {
-  stats = [
-    { title: 'Total Tasks', value: 30 },
-    { title: 'In Progress', value: 8 },
-    { title: 'Completed', value: 12 },
-    { title: 'Overdue', value: 4 },
-  ];
+  get totalTasks(): number {
+    return this.tasks.length;
+  }
+
+  get completedTasks(): number {
+    return this.tasks.filter((task) => task.status === 'Completed').length;
+  }
+
+  get pendingTasks(): number {
+    return this.tasks.filter((task) => task.status === 'Pending').length;
+  }
+
+  get inProgressTasks(): number {
+    return this.tasks.filter((task) => task.status === 'In Progress').length;
+  }
+
   tasks: Task[] = [
     {
       id: 1,
